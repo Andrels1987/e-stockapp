@@ -1,0 +1,51 @@
+<!--You're not initializing your app correctly. 
+//When you import the AngularFireModule, you need to initialize there:
+//AngularFireModule.initializeApp(yourFirebaseConfig),-->
+<div class="search-login d-flex pt-1">
+    <div>
+        <form action="" class="bg-secondary form d-flex mt-5 pt-1">
+            <h2 class="ml-2">Procurar</h2>
+            <input type="search" class="form-control col-6 ml-3" [formControl]="searchField">
+            <!--<button class="btn btn-primary p-1" (click)="search(term.value)" value="procurar">procurar</button>-->
+        </form>
+    </div>
+    <div>
+        <app-login-area></app-login-area>
+    </div> 
+</div>
+<div class="search" *ngIf="prod">
+    <div class="product-list border border-dark rounded bg-light" *ngFor="let p of prod | async">
+        <a href="#" routerLink="/add-produto/{{p.id}}">
+            <div class="title pt-2 bg-light text-dark rounded text-center">
+                <h1>{{p.nomeProduto}}</h1>
+            </div> 
+            <div class="tipo-quant bg-dark rounded text-white d-flex">
+                <span class="float-left estoque bg-warning text-dark"
+                    [ngClass]="{'bg-danger': p.quantidadeEstoque < p.minimoEstoque}">
+                    {{p.quantidadeEstoque}}
+                </span>
+                <p class="tipo  ml-1">{{p.tipo}}</p>
+            </div>           
+        </a>
+    </div>
+</div>
+
+<div class="product-list pl-1 pr-1">
+    <div class="border border-dark" *ngFor="let p of products | async">
+        <a href="#" routerLink="/add-produto/{{p.id}}">
+            <div class="products">
+                <p class="nome-produto text-center text-dark">{{p.nomeProduto}}</p>
+
+                <div class="tipo-quant bg-dark rounded text-light d-flex">
+                    <span class="float-left estoque bg-warning text-light" [ngClass]="{
+                            'bg-danger': p.quantidadeEstoque < p.minimoEstoque                        
+                            }">
+                        {{p.quantidadeEstoque}}
+                    </span>
+                    <p class="tipo  ml-1">{{p.tipo}}</p>
+                </div>
+
+            </div>
+        </a>
+    </div>
+</div>

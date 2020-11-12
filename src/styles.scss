@@ -1,0 +1,254 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+//HEADER
+.navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    button{
+        margin-right: 6rem;
+    }
+}
+
+//LOGIN
+.login{
+   text-align: center;
+   padding-top: 15rem;
+    button{
+        margin-left: .5rem;
+        padding: 0 1em ;
+    }
+}
+//LOGIN-AREA
+.login-area{
+    height: 2.5rem;
+    position: fixed;
+    right: 0;
+    top: 5px;
+    z-index: 2;
+}
+.footer{
+    position: fixed;
+    bottom: 37px;
+    width: 100%;    
+}
+
+//HOME
+.search-login{
+
+    .form{
+        position: fixed;
+        top: .1em;
+        width: 100%;
+    }
+}
+.product-list{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 2px; 
+    margin-bottom: 3rem;
+    margin-top: 7rem;
+       
+        .products{
+            height: 110px;
+        }
+    
+        .tipo-quant{
+           margin-top: 2.7em; 
+           font-weight: bolder;
+            letter-spacing: 1px;
+        }  
+    
+    .nome-produto{
+        background-color: #D2BD92  ;
+        font-weight: bolder;
+        letter-spacing: 1px;
+        height: 2.7em;
+    }
+}
+
+//LISTA DE PIZZAS
+    .pizza-list{
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 2px; 
+        padding-top: 4rem;
+        padding-bottom: 1rem;
+
+        .menu-pizza{
+            height: 8rem;
+            font-weight: bolder;
+            letter-spacing: 1px;
+            background-color:#FFFDE7 ;
+        }
+        
+        .atualizar{
+            height: 2rem;
+            font-size: .8em;
+            font-weight: bolder;
+            letter-spacing: 1px;
+            background-color: #edf1ec ;
+            color: #224975 ;
+            border: solid 1px #224975;
+            line-height: 10px;
+        } 
+
+        .pizza-nome{
+            height: 4rem;
+        }
+    }
+    .page-form-pizza{
+        padding-top: 7rem;
+    }
+    .addPizza{
+        position: fixed;
+        bottom: 0;
+        margin-bottom: 3.5rem;
+        height: 40px;
+        width: 95%;
+    
+        .btnAdd{
+            padding-top: .7em;
+            padding-left: .4em;
+            width: 43px;
+            
+        }
+        
+        .add{
+            font-size: 4em;
+        }
+    }
+
+    //FORM PRODUCTS
+    .form-product{
+        padding-top: 6rem;
+    }
+
+@media screen and (max-width: 980px){
+//HOME
+.product-list{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2px; 
+       
+        .products{
+            height: 100px;
+            
+        }
+        
+        .nome-produto{
+            height: 2.7em;
+        }
+        .tipo-quant{
+           margin-top: 2em; 
+        }   
+}
+//LISTA DE PIZZAS
+    .pizza-list{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 2px; 
+        margin-bottom: 2rem;
+
+        
+    }
+}
+@media screen and (max-width: 702px){
+    //HOME
+    .product-list{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2px; 
+      
+       
+        .products{
+            height: 95px;
+            
+        }
+        
+        .nome-produto{
+            height: 2.7em;
+        }
+        .tipo-quant{
+           margin-top: 1.6em; 
+        }   
+    }
+
+    //LISTA DE PIZZAS
+    .pizza-list{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2px; 
+        margin-bottom: 2rem;
+
+        
+        
+    }
+}
+@media screen and (max-width: 465px){
+    //HOME
+    .product-list{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2px; 
+        
+       
+        .products{
+            height: 90px;
+        }
+        
+        .nome-produto{
+            height: 2.7em;
+        }
+        .tipo-quant{
+           margin-top: 1.4em; 
+        }
+    }
+    //LISTA DE PIZZAS
+    .pizza-list{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2px; 
+        margin-bottom: 2rem;
+
+
+        
+    }
+}
+
+@media screen and (max-width: 354px){
+    //HOME
+    .product-list{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4px; 
+        margin-bottom: 3rem;
+    }
+
+    //LISTA DE PIZZAS
+    .pizza-list{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2px; 
+        margin-bottom: 2rem;
+        
+        .menu-pizza{
+            height: 6rem;
+            font-weight: bolder;
+            letter-spacing: 1px;
+        }
+        .pizza-nome{
+            height: 2rem;
+        }
+
+        
+
+    }
+}
+
+
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;background-color: #F0EDE3;}

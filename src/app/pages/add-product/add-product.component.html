@@ -1,0 +1,53 @@
+<div>
+  <app-login-area></app-login-area>
+</div>
+<div class="form-product pl-3 pr-3">
+    <h1 class="text-center mt-1">Adicionar produto</h1>
+  <form action="" class="" #fc="ngForm" (ngSubmit)="salvarProduto(fc)" >
+    <input type="text" class="form-control   mt-3" placeholder="nome do produto" name="product.nomeProduto" [(ngModel)]="product.nomeProduto">
+    <input type="number" class="form-control  mt-3" placeholder="Quantidade em estoque" name="quantidadeEstoque" [(ngModel)]="product.quantidadeEstoque">
+    <input type="text" class="form-control    mt-3" placeholder="Categoria ex: Pacote, kilo... " name="categoria" [(ngModel)]="product.categoria">
+    <input type="number" class="form-control   mt-3" placeholder="Minimo em estoque"name="minimo" [(ngModel)]="product.minimoEstoque">
+    
+    
+    <div class=" p-0">
+      <div class="">
+        <h4 class="float-left p-0 m-0" for="inlineFormCustomSelect">Tipo</h4>
+        <select class="custom-select" id="inlineFormCustomSelect" name="tipo" [(ngModel)]="product.tipo">
+          <option selected>Choose...</option>
+          <option value="Kilo(s)">Kilo(s)</option>
+          <option value="Garrafa(s)">Garrafa(s)</option>
+          <option value="Lata(s)">Lata(s)</option>
+          <option value="Bisnaga(s)">Bisnaga(s)</option>
+          <option value="Tira(s)">Tira(s)</option>
+          <option value="Pacote(s)">Pacote(s)</option>
+          <option value="Grama(s)">Grama(s)</option>
+          <option value="Maço(s)">Maço(s)</option>
+        </select>
+      </div>
+    </div>
+      
+      <div class=" radio-check mt-3 p-0 border border-dark bg-dark text-white col-4 col-sm-6">
+        <h4 class="m-0">Descontinuado</h4>
+        <div class="form-check " >
+          <input class="form-check-input "  type="radio" name="choice" id="exampleRadios1" value="true" checked >
+          <label class="form-check-label " for="exampleRadios1">
+            Sim
+          </label>
+        </div>
+
+        <div class="form-check " >
+          <input class="form-check-input " type="radio" name="choice" id="exampleRadios2" value="false">
+          <label class="form-check-label " for="exampleRadios2">
+            Não
+          </label>
+        </div>
+      </div>
+
+      <div>
+        <button class="btn btn-dark text-warning float-right mt-2" type="submit" *ngIf="id !== null" >Atualizar</button>
+        <button class="btn btn-dark text-warning float-right  mt-2" type="submit" *ngIf="id === null">Salvar</button>
+      </div>
+    
+  </form>
+</div>

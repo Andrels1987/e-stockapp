@@ -1,0 +1,30 @@
+<div class="p-0 col-11 ml-3">
+    <form action="" #fc="ngForm" (ngSubmit)="enviarProducao(fc)">
+        <div class=" form-group" >
+            <h2 for="" class=" float-left p-0 mr-2">Massa 35 salgada: </h2>
+            <input type="number" class="form-control col-2 " name="ms35" [(ngModel)]="producao.ms35">
+        </div>
+        <div class="l-12 form-group">
+            <h2 for="" class=" float-left mr-2 p-0 ">Massa 45 salgada: </h2>
+            <input type="number" class="form-control col-2 " name="ms34" [(ngModel)]="producao.ms45">
+        </div>
+
+        <div class= "form-group">
+            <h2 for="" class=" float-left mr-2 ">Massa 25 doce: </h2>
+            <input type="number" class="form-control col-2 " name="md25" [(ngModel)]="producao.md25">
+        </div>
+        <div class=" form-group">
+            <h2 for="" class=" float-left mr-2 ">Massa 35 doce: </h2>
+            <input type="number" class="form-control col-2 " name="md35" [(ngModel)]="producao.md35">
+        </div>
+        <div class=" form-group">
+            <h2 for="" class=" float-left mr-2 ">Massa 45 doce: </h2>
+            <input type="number" class="form-control col-2 " name="md45" [(ngModel)]="producao.md45">
+        </div>       
+
+        <div>
+            <button type="submit" class="btn btn-info float-right">Salvar</button>
+        </div>
+
+    </form>
+</div>

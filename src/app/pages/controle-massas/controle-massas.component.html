@@ -1,0 +1,22 @@
+<div>
+    <app-login-area></app-login-area>
+</div>
+<div class="pt-5 col-12">
+    <div class="text-center mt-3">
+        <h1 class="font-weight-bold">Controle de massas</h1>
+    </div>
+    <h2 class="font-weight-bold">Data: <span>{{date | date: 'd/M/y'}}</span></h2>
+
+    <div class="btnControle">
+        <button class="btn btn-success col-4 ml-2" [routerLink]="['disponivel']" style="font-size: 15px;">Disponivel</button>
+        <button class="btn btn-success col-3 ml-3 mr-4" [routerLink]="['producao']" style="font-size: 15px;">Produção</button>
+        <button class="btn btn-success col-3 " [routerLink]="['saida']" style="font-size: 15px;">Saida</button>
+    </div>
+
+    <div class="mt-5">
+        <router-outlet></router-outlet>
+    </div>
+    
+   
+
+</div>

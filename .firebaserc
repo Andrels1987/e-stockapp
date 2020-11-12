@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "e-stock-33cd2": {
+      "hosting": {
+        "e-stockapp": [
+          "e-stock-33cd2"
+        ]
+      }
+    }
+  }
+}

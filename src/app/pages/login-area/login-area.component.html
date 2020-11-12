@@ -1,0 +1,10 @@
+<div class="login-area user pagination mt-1 justify-content-end" (click)="logout()">
+    <p class="mr-2  pt-1 pl-2  pr-2 bg-warning rounded text-dark" *ngIf="user; else login">
+        {{user}}
+    </p>
+    <ng-template #login>
+        <p class="mr-2  pt-1 pl-2  pr-2 bg-success rounded text-light">
+            Faça login
+        </p>
+    </ng-template>
+</div>

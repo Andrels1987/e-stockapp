@@ -1,0 +1,55 @@
+<div class="card-block p-0 mt-3">
+
+    <div class="float-left head-sal">
+        <tr>
+            <th scope="col">Salgada</th>
+        </tr>
+    </div>
+    <div class="">
+        <tr>
+            <th scope="col">| Doce</th>
+        </tr>
+    </div>
+    <table class="table p-0 m-0">
+        <thead class="border">
+            <tr>
+                <th scope="col">Bolas</th>
+                <th scope="col">35</th>
+                <th scope="col">45</th>
+                <th scope="col">25</th>
+                <th scope="col">35</th>
+                <th scope="col">45</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">Disp.:</th>
+                <td>{{disponivel.ms35}}</td>
+                <td>{{disponivel.ms45}}</td>
+                <td>{{disponivel.md25}}</td>
+                <td>{{disponivel.md35}}</td>
+                <td>{{disponivel.md45}}</td>
+            </tr>
+            <tr>
+                <th scope="row">Prod.:</th>
+                <td>{{produzida.ms35}}</td>
+                <td>{{produzida.ms45}}</td>
+                <td>{{produzida.md25}}</td>
+                <td>{{produzida.md35}}</td>
+                <td>{{produzida.md45}}</td>
+            </tr>
+            <tr>
+                <th scope="row">Usou:</th>
+                <td>{{usada.ms35}}</td>
+                <td>{{usada.ms45}}</td>
+                <td>{{usada.md25}}</td>
+                <td>{{usada.md35}}</td>
+                <td>{{usada.md45}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div id="novo-dia">
+        <input type="button" value="Dia seguinte" class="btn btn-dark text-danger" (click)="diaSeguinte()">
+    </div>
+</div>

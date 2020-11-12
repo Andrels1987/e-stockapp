@@ -1,0 +1,18 @@
+<div>
+    <app-login-area></app-login-area>
+</div>
+<div class="pizza-list pl-1 pr-1">
+    <div class="menu-pizza  border border-dark rounded " *ngFor="let p of pizzas | async">
+        <p class="pizza-nome pt-2 text-dark rounded text-center">{{p.nome}}</p>
+        <div class="text-center mt-4">
+            <button class="btn  atualizar " (click)="atualizar(p.id)">Atualizar estoque</button>
+        </div>
+
+    </div>
+</div>
+
+<div class="addPizza">
+    <div class="bg-dark rounded-circle btnAdd float-right">
+        <a href="" [routerLink]="['/add-pizza']" class="add text-warning">+</a>
+    </div>
+</div>
